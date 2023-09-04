@@ -1,0 +1,179 @@
+@font-face {
+  font-family: AvenirNext;
+  src: url(../fonts/Avenir-Next.ttf); }
+
+@font-face {
+  font-family: AvenirNextBold;
+  src: url(../fonts/Avenir-Next-Bold.ttf); }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: AvenirNext, sans-serif;
+  background: #fffdee;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 100%; }
+
+#root {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth; }
+
+.Brand {
+  padding: 20px; }
+  .Brand img {
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    z-index: 2; }
+
+@keyframes bounce {
+  from {
+    transform: translateY(10px); }
+  to {
+    transform: translateY(0); } }
+
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(10px); }
+  to {
+    transform: translateY(0); } }
+
+.Scroll {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+  width: 50px;
+  height: 50px; }
+  .Scroll:before {
+    content: "";
+    display: block;
+    height: 30px;
+    background: url("../img/mouse.svg") no-repeat scroll center/contain; }
+  .Scroll:after {
+    content: "";
+    display: block;
+    height: 10px;
+    margin-top: 10px;
+    background: url("../img/down-arrow.svg") no-repeat scroll center/contain;
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s infinite alternate; }
+  .Scroll:hover {
+    cursor: pointer; }
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; }
+  .links a {
+    display: block;
+    background: #082d74;
+    border: 3px solid #fc8363;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    border-radius: 9999px;
+    z-index: 4; }
+    .links a:hover {
+      background: #fc8363; }
+  .links img {
+    max-width: 50%;
+    max-height: 40%; }
+
+.Hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  z-index: 1; }
+  .Hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none; }
+
+.Content {
+  background: #fffdee;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  font-weight: lighter; }
+
+.Images img {
+  margin: 0 0 -5px;
+  width: 100%;
+  max-width: 400px;
+  display: block; }
+
+.Copy {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  line-height: 40px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #fffdee;
+  position: relative;
+  z-index: 3; }
+  .Copy p {
+    font-weight: 100; }
+    .Copy p:first-child {
+      margin-top: 0; }
+  .Copy cite {
+    font-weight: bold;
+    font-family: AvenirNextBold, sans-serif; }
+
+.CTA {
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: url("../img/dock.jpg") no-repeat scroll center/cover;
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .CTA .linksWrap {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; }
+    .CTA .linksWrap a {
+      display: block;
+      background: #082d74;
+      color: white;
+      text-decoration: none;
+      padding: 25px 25px;
+      margin: 20px 0;
+      font-size: 1.2rem;
+      text-align: center;
+      border-radius: 99999999px;
+      line-height: normal;
+      max-width: 800px;
+      font-family: AvenirNextBold, sans-serif; }
+      .CTA .linksWrap a:hover {
+        background: #fc8363; }
+
+@media (min-width: 768px) {
+  .Content {
+    flex-direction: row; }
+  .Brand .links a {
+    margin: 0 10px; }
+  .CTA .linksWrap a {
+    font-size: 1.6rem; } }
